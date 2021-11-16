@@ -1,0 +1,9 @@
+@import "../../global.scss";
+.about-container {
+  height: calc(100vh - $navBarWidth);
+  top: $navBarWidth;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
