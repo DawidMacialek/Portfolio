@@ -1,15 +1,15 @@
-import "./app.scss";
-import { useState } from "react";
-import Home from "./copmonents/home/Home";
-import About from "./copmonents/about/About";
-import Projects from "./copmonents/projects/Projects";
-import Contact from "./copmonents/contact/Contact";
-import NavBar from "./copmonents/navBar/NavBar";
-import { HOME, ABOUT, PROJECTS, CONTACT } from "./data/menuElements";
+import './app.scss';
+import { useState } from 'react';
+import Home from './copmonents/home/Home';
+import About from './copmonents/about/About';
+import Projects from './copmonents/projects/Projects';
+import Contact from './copmonents/contact/Contact';
+import NavBar from './copmonents/navBar/NavBar';
+import { HOME, ABOUT, PROJECTS, CONTACT } from './data/menuElements';
 
 function App() {
   const [showNavBar, setShowNavBar] = useState(false);
-  const [selectedAtNav, setSelectedAtNav] = useState("");
+  const [selectedAtNav, setSelectedAtNav] = useState('');
 
   const handleScroll = (e) => {
     let windowHeight = window.innerHeight;
@@ -32,10 +32,10 @@ function App() {
     }
   };
   return (
-    <div className="app">
+    <div className='app'>
       <NavBar showNavBar={showNavBar} selectedAtNav={selectedAtNav} />
-      <div className="pages" onScroll={handleScroll}>
-        <Home />
+      <div className='pages' onScroll={handleScroll}>
+        <Home showNavBar={showNavBar} />
         <About />
         <Projects />
         <Contact />
