@@ -40,16 +40,14 @@ function Home({}) {
         </div>
         <div className='welcome'>
           <h1>
-            Jestem Dawid Macialek,
+            Jestem Dawid Maciałek,
             <br />
             Witam Cię na moim portfolio!
           </h1>
         </div>
         <div className='arrow-container'>
           <a href={`#${ABOUT}`}>
-            <span class='material-icons-round arrow'>
-              keyboard_double_arrow_down
-            </span>
+            <span class='material-icons-round arrow'>keyboard_arrow_down</span>
           </a>
         </div>
       </div>

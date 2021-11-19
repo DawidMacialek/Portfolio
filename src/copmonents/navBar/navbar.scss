@@ -1,4 +1,4 @@
-@import "../../global.scss";
+@import '../../global.scss';
 
 .nav-container {
   position: fixed;
@@ -6,7 +6,8 @@
   left: 0;
   width: 100%;
   height: $navBarWidth;
-  background-color: pink;
+  background-color: #c6cece;
+  // background-color: #5b5d74;
   transition: all 0.5s ease-in-out;
   z-index: 2;
   display: flex;
@@ -16,7 +17,7 @@
     top: 0;
   }
   .nav-bar {
-    width: 80%;
+    width: 70%;
     ul {
       display: flex;
       align-items: center;

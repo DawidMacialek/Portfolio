@@ -23,11 +23,11 @@ function App() {
 
     if (windowHeight > scrollPos) {
       setSelectedAtNav(HOME);
-    } else if (windowHeight < scrollPos && windowHeight * 2 > scrollPos) {
+    } else if (windowHeight <= scrollPos && windowHeight * 2 > scrollPos) {
       setSelectedAtNav(ABOUT);
-    } else if (windowHeight * 2 < scrollPos && windowHeight * 3 > scrollPos) {
+    } else if (windowHeight * 2 <= scrollPos && windowHeight * 3 > scrollPos) {
       setSelectedAtNav(PROJECTS);
-    } else if (windowHeight * 3 < scrollPos && windowHeight * 4 > scrollPos) {
+    } else if (windowHeight * 3 <= scrollPos && windowHeight * 4 > scrollPos) {
       setSelectedAtNav(CONTACT);
     }
   };
