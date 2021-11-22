@@ -3,13 +3,13 @@ import { init } from 'ityped';
 import './home.scss';
 import 'material-icons/iconfont/material-icons.css';
 import { quote } from '../../data/homePage';
-import { ABOUT } from '../../data/menuElements';
+import { HOME, ABOUT } from '../../data/menuElements';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
-function Home({}) {
-  // const [letterQuote, setLetterQuote] = useState([]);
+function Home() {
   const refToQuote = useRef();
   const refToAuthor = useRef();
-  // quote typing
+
   useEffect(() => {
     const isTypping = 150;
     init(refToQuote.current, {
@@ -32,7 +32,7 @@ function Home({}) {
   }, []);
 
   return (
-    <div className='home-container' id='home'>
+    <div className='home-container' id={HOME}>
       <div className='home'>
         <div className='quote-container'>
           <span className='quote' ref={refToQuote}></span>
@@ -46,9 +46,9 @@ function Home({}) {
           </h1>
         </div>
         <div className='arrow-container'>
-          <a href={`#${ABOUT}`}>
+          <Link to={ABOUT} spy={true} smooth='easeInOutBack' duration={600}>
             <span class='material-icons-round arrow'>keyboard_arrow_down</span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
