@@ -6,18 +6,22 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import GameProjects from './projectTypes/gameProjects/GameProjects';
-import WebProjects from './projectTypes/webProjects/WebProjects';
-import AppProjects from './projectTypes/appProjects/AppProjects';
+import ItemList from './itemList/ItemList';
+import { games } from '../../data/Projects/games.js';
+import { apps } from '../../data/Projects/apps.js';
+import { webs } from '../../data/Projects/webs.js';
 
+const all = games.concat(apps.concat(webs));
 function Projects() {
   return (
     <Router>
       <div className='projects-container' id={PROJECTS}>
         <div className='projects'>
-         
           <nav className='nav-projects-container'>
             <ul className='ul'>
+              <li>
+                <NavLink to='/'>All</NavLink>
+              </li>
               <li>
                 <NavLink to='/game-projects'>Game</NavLink>
               </li>
@@ -31,9 +35,19 @@ function Projects() {
           </nav>
           <div className='content'>
             <Routes>
-              <Route path='/game-projects' element={<GameProjects />} />
-              <Route path='/web-projects' element={<WebProjects />} />
-              <Route path='/app-projects' element={<AppProjects />} />
+              <Route path='/' element={<ItemList dataItems={all} />} />
+              <Route
+                path='/game-projects'
+                element={<ItemList dataItems={games} />}
+              />
+              <Route
+                path='/web-projects'
+                element={<ItemList dataItems={webs} />}
+              />
+              <Route
+                path='/app-projects'
+                element={<ItemList dataItems={apps} />}
+              />
             </Routes>
           </div>
         </div>
