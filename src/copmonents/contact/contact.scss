@@ -1,10 +1,103 @@
 @import '../../global.scss';
 
 .contact-container {
+  z-index: 1;
   height: 100vh;
-  // top: $navBarWidth;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #888;
+  @include flex-center;
+  .contact-box {
+    @include flex-center;
+    background-color: $contrastColor;
+    border-radius: 5px;
+    @include mobileThree {
+      flex-direction: column;
+    }
+    .contact {
+      .phone,
+      .email {
+        border-radius: 3px;
+        border: 1px solid white;
+        box-shadow: 0 0 1px 1px black;
+        @include flex-center;
+        margin: 20px;
+        color: $lightMainColor;
+        padding: 15px;
+        letter-spacing: 4px;
+        a {
+          display: inline-block;
+          color: inherit;
+          text-decoration: none;
+          padding: 15px;
+          font-size: 28px;
+        }
+      }
+      .phone {
+        justify-content: start;
+      }
+    }
+
+    .links-container {
+      @include flex-center;
+
+      flex-direction: column;
+      margin: 0 25px;
+      @include mobileThree {
+        flex-direction: row;
+      }
+
+      .linkIn-icon {
+        color: black;
+        padding: 15px;
+
+        transition: all 0.5s ease;
+        &:hover {
+          color: #0b66c2;
+          padding: 0;
+        }
+        @include mobileThree {
+          margin: 0 20px;
+        }
+      }
+      .gh-icon {
+        color: black;
+        padding: 15px;
+        transition: all 0.5s ease;
+        &:hover {
+          color: #fff;
+          padding: 0;
+        }
+        @include mobileThree {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $contrastColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10%;
+    .copy {
+      @include flex-center;
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+      flex-direction: row;
+      .copy-right-icon {
+        color: #fff;
+      }
+      p {
+        margin: 0 10px;
+      }
+    }
+    p {
+      text-transform: uppercase;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+  }
 }
