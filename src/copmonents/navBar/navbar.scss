@@ -1,53 +1,79 @@
 @import '../../global.scss';
 
 .nav-container {
-  position: fixed;
-  top: -$navBarWidth;
+  position: absolute;
+  z-index: -20;
+  bottom: -$navBarWidth;
   left: 0;
   width: 100%;
   height: $navBarWidth;
-  background-color: #c6cece;
-  // background-color: #5b5d74;
-  transition: all 0.5s ease-in-out;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: $contrastColor;
+  @include flex-center;
+  border-top: 1px solid #000;
   &.active-nav-container {
+    border-top: none;
+    position: fixed;
+    z-index: 2;
     top: 0;
+    bottom: 0;
   }
   .nav-bar {
     width: 70%;
+
+    @include mobileOne {
+      width: 80%;
+    }
+    @include mobileTwo {
+      width: 90%;
+    }
+    @include mobileFour {
+      width: 100%;
+    }
+
     ul {
       display: flex;
       align-items: center;
       justify-content: space-around;
+      @include mobileThree {
+        justify-content: space-between;
+        padding: 0 20px;
+      }
+      @include mobileFour {
+        padding: 0 2%;
+      }
+      @include mobileFive {
+        padding: 0 0;
+      }
 
       li {
-        // background-color: #fff;
         list-style: none;
         padding: 5px;
         margin: 5px;
-        // border-bottom: none;
-        // transition: all 0.2s ease;
-        a {
-          text-transform: uppercase;
-          text-decoration: none;
-          font-size: 22px;
-          color: #000;
-          &:active {
-            color: #000;
-          }
+        transition: all 0.2s ease;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 26px;
+        color: $lightMainColor;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        .active {
+          border-bottom: 2px solid #333;
         }
-        &.selected {
-          // background-color: yellow;
-          // border-radius: 10px;
-          // color: white;
-          // padding: 5px;
-          border-bottom: 1px solid #fff;
-        }
+
         &:hover {
           transform: translateY(2px);
+        }
+        @include mobileOne {
+          font-size: 24px;
+          font-weight: 400;
+        }
+        @include mobileFour {
+          font-size: 22px;
+          font-weight: 300;
+        }
+        @include mobileFive {
+          font-size: 20px;
+          font-weight: 300;
         }
       }
     }

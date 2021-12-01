@@ -1,6 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import 'material-icons/iconfont/material-icons.css';
 import './item.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faCode,
+  faPlayCircle,
+  faTimes,
+} from '@fortawesome/free-solid-svg-icons';
 
 function Item({
   name,
@@ -29,32 +34,29 @@ function Item({
 
   return (
     <>
-      <div className='div' onClick={() => setInfoOpen(name)}>
+      <div className='item' onClick={() => setInfoOpen(name)}>
         <img src={miniPicture} alt={`${name}`} />
         <h4>{name}</h4>
       </div>
       <div ref={infoRef} className={infoOpen === name ? 'info active' : 'info'}>
         <div className='info-header'>
           <h3>{name}</h3>
-          <span
+          <FontAwesomeIcon
+            icon={faTimes}
             onClick={handleCloseClick}
-            className='material-icons-round arrow close'
-          >
-            close
-          </span>
+            className='close'
+          />
         </div>
-        <div className='content-info'>
+        <div className='info-content'>
           <p>{description}</p>
           <img src={Picture} alt={`gra ${name}`} />
         </div>
         <div className='info-footer'>
           <a href={playHref} target='_blank' rel='noreferrer noopener'>
-            <span className='material-icons-outlined icon'>
-              play_circle_outline
-            </span>
+            <FontAwesomeIcon icon={faPlayCircle} className='icons' />
           </a>
           <a href={gitHubHref} target='_blank' rel='noreferrer noopener'>
-            <span className='material-icons-outlined icon'>code</span>
+            <FontAwesomeIcon icon={faCode} className='icons' />
           </a>
         </div>
       </div>

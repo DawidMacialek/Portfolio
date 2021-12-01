@@ -1,8 +1,8 @@
 // data and variables for elements at menu
-export const HOME = "home";
-export const ABOUT = "about";
-export const PROJECTS = "projects";
-export const CONTACT = "contact";
+export const HOME = 'start';
+export const ABOUT = 'o mnie';
+export const PROJECTS = 'projekty';
+export const CONTACT = 'kontakt';
 
 export const topMenu = [
   {
@@ -18,3 +18,5 @@ export const topMenu = [
     id: CONTACT,
   },
 ];
+
+export const projectsMenu = [{}];

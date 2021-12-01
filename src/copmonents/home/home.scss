@@ -1,20 +1,14 @@
 @import '../../global.scss';
 
 .home-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  // height: 100%;
+  // scroll-snap-align: start;
+  @include flex-center;
 
-  background-color: #aaa;
-
-  // background-size: cover;
-  z-index: 1;
   &:before {
     content: '';
     display: block;
-    z-index: 0;
     position: fixed;
+    z-index: -50;
     top: 0;
     left: 0;
     background-image: url('../../data/assets/home-background-2.jpg');
@@ -24,68 +18,99 @@
     width: 100vw;
   }
   .home {
+    position: relative;
     z-index: 1;
     height: 100vh;
-    display: flex;
+    min-height: 300px;
+    @include flex-center;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 95%;
-    .quote-container {
-      position: relative;
-      flex: 3;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    width: 100%;
 
-      .quote {
-        font-family: 'Cinzel', serif;
-        min-height: 10%;
-        font-size: 22px;
-        color: #000;
-        letter-spacing: 2px;
-        font-weight: 400;
-        &:before {
-          content: '"';
-        }
-        &:after {
-          content: '"';
-        }
-      }
-      .author {
-        align-self: flex-end;
-        font-style: italic;
-        min-height: 10%;
-        font-size: 18px;
-        margin-top: 15px;
-        padding-right: 15px;
-        color: #444;
-      }
-    }
     .welcome {
-      display: flex;
-      justify-content: center;
+      @include flex-center;
+      background-color: $contrastColor;
       align-items: flex-start;
-      flex: 3;
+      flex-direction: column;
+      padding: 5%;
+      height: 100%;
+
       h1 {
-        // font-family: 'Montagu Slab', serif;
-        text-align: center;
-        font-size: 46px;
-        line-height: 70px;
+        font-size: 60px;
+        line-height: 60px;
+        margin: 2% 0;
         letter-spacing: 2px;
-        font-weight: 500;
+        text-transform: uppercase;
+        font-weight: 600;
         color: black;
-        // background-color: #fff;
+        @include mobileThree {
+          font-size: 50px;
+          margin: 1% 0;
+          font-weight: 400;
+        }
+        @include mobileHorizontal {
+          font-size: 40px;
+        }
+      }
+      h2 {
+        margin: 2% 0;
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 2px;
+        color: $lightMainColor;
+        @include mobileThree {
+          font-size: 30px;
+          line-height: 36px;
+          font-weight: 400;
+        }
+        @include mobileHorizontal {
+          font-size: 25px;
+          margin: 1% 0;
+        }
+      }
+      .tapping-container {
+        margin: 2% 0;
+        height: 40px;
+
+        .quote {
+          display: inline-block;
+          line-height: 34px;
+          height: 40px;
+          font-size: 34px;
+          color: black;
+          @include mobileThree {
+            font-size: 30px;
+            line-height: 30px;
+            letter-spacing: 1px;
+          }
+          @include mobileFour {
+            font-size: 26px;
+          }
+          @include mobileHorizontal {
+            line-height: 22px;
+            font-size: 22px;
+            height: 24px;
+          }
+        }
       }
     }
-    .arrow-container {
-      flex: 2;
-      .arrow {
-        font-size: 150px;
-        color: #aaa;
-        animation: animateArrow 1s linear 1s infinite alternate;
-        font-weight: 100;
+  }
+  .arrow-container {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    .arrow {
+      color: $lightMainColor;
+      animation: animateArrow 1s linear 1s infinite alternate;
+      font-size: 100px;
+      @include mobileHorizontal {
+        font-size: 80px;
       }
+    }
+    @include mobileHorizontal {
+      bottom: 1%;
     }
   }
 }
@@ -93,16 +118,43 @@
 @keyframes animateArrow {
   0% {
     transform: translateY(0);
-    opacity: 1;
+    opacity: 0.7;
   }
-  25% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 1;
-  }
+  // 25% {
+  //   opacity: 0.2;
+  // }
+  // 50% {
+  //   opacity: 1;
+  // }
   100% {
-    transform: translateY(40%);
-    opacity: 0.5;
+    transform: translateY(10%);
+    opacity: 0.2;
+  }
+}
+.ityped-cursor {
+  font-size: 34px;
+  font-weight: 200;
+  opacity: 1;
+  -webkit-animation: blink 0.3s infinite;
+  -moz-animation: blink 0.3s infinite;
+  animation: blink 0.3s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes blink {
+  100% {
+    opacity: 0;
   }
 }

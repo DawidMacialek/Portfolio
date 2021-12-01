@@ -1,14 +1,38 @@
-.div {
+@import '../../../global.scss';
+.item {
   position: relative;
+  background-color: $lightMainColor;
+  border: 1px solid #000;
   width: 250px;
   height: 250px;
-  background-color: #fff;
   margin: 15px;
-  border: 1px solid #000;
   font-size: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  -webkit-tap-highlight-color: transparent;
+  @include flex-center;
+  @include mobileOne {
+    width: 220px;
+    height: 220px;
+    margin: 10px;
+    font-size: 30px;
+  }
+  @include mobileTwo {
+    width: 200px;
+    height: 200px;
+    margin: 8px;
+    font-size: 26px;
+  }
+  @include mobileThree {
+    width: 180px;
+    height: 180px;
+    margin: 6px;
+    font-size: 26px;
+  }
+  @include mobileFour {
+    width: 120px;
+    height: 120px;
+    margin: 6px;
+    font-size: 20px;
+  }
   h4 {
     text-transform: uppercase;
     text-align: center;
@@ -25,50 +49,87 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    @include mobileThree {
+      opacity: 0.6;
+    }
+    @include mobileFour {
+      opacity: 0.6;
+    }
   }
   img:hover {
     opacity: 0.4;
   }
 }
 .info {
-  z-index: 5;
-  position: absolute;
-  top: -100px;
-  left: 50px;
-  right: 50px;
-  bottom: 50px;
-  background-color: #555;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  position: fixed;
+  z-index: 200;
+  background-color: darken($lightMainColor, 60%);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   display: none;
+  @include mobileThree {
+    top: 15%;
+    left: 5%;
+    right: 5%;
+  }
+  @include mobileFour {
+    top: 15%;
+    left: 3%;
+    right: 3%;
+  }
   &.active {
     display: flex;
   }
   .info-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     h3 {
       padding-left: 5%;
-      color: whitesmoke;
+      color: $lightMainColor;
+      font-size: 44px;
       letter-spacing: 5px;
+      @include mobileTwo {
+        font-size: 38px;
+      }
+      @include mobileThree {
+        font-size: 30px;
+      }
+      @include mobileFour {
+        font-size: 22px;
+      }
     }
     .close {
       margin: 2%;
-      font-size: 68px;
-      color: #fff;
+      font-size: 60px;
+      color: $lightMainColor;
       cursor: pointer;
       transition: transform 0.3s ease-in-out;
+      -webkit-tap-highlight-color: transparent;
       &:hover {
         transform: rotate(-90deg);
       }
+      @include mobileThree {
+        font-size: 40px;
+      }
+      @include mobileFour {
+        font-size: 30px;
+      }
     }
   }
-  .content-info {
+  .info-content {
     flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    @include mobileFour {
+      flex-direction: column;
+      align-items: center;
+    }
     p {
       margin: 3%;
       font-weight: 300;
@@ -76,7 +137,16 @@
       word-spacing: 3px;
       letter-spacing: 2px;
       font-size: 20px;
-      color: whitesmoke;
+      color: $lightMainColor;
+      @include mobileTwo {
+        margin: 2%;
+        font-size: 18px;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+      }
+      @include mobileThree {
+        font-size: 16px;
+      }
     }
     img {
       margin-right: 3%;
@@ -85,19 +155,36 @@
       max-width: 400px;
       max-height: 500px;
       image-orientation: center;
+      @include mobileTwo {
+        margin-right: 2%;
+        max-width: 300px;
+        max-height: 400px;
+      }
+      @include mobileThree {
+        max-width: 200px;
+        max-height: 300px;
+      }
+      @include mobileFour {
+        display: none;
+      }
     }
   }
   .info-footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    .icon {
+    .icons {
       font-size: 80px;
-      color: #fff;
       cursor: pointer;
-      padding: 0 15px;
+      padding: 10px 15px;
+      font-weight: 200;
+      color: $lightMainColor;
+      -webkit-tap-highlight-color: transparent;
       &:hover {
-        color: darkblue;
+        color: $contrastColor;
+      }
+      @include mobileThree {
+        font-size: 60px;
       }
     }
   }

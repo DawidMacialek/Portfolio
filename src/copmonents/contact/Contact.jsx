@@ -15,13 +15,21 @@ function Contact() {
         <div className='contact'>
           <div className='phone'>
             <div>
-              <FontAwesomeIcon icon={faPhoneSquare} size='5x' color='black' />
+              <FontAwesomeIcon
+                icon={faPhoneSquare}
+                color='black'
+                className='phone-number'
+              />
             </div>
             <a href='tel:+48514688801'>+48514688801</a>
           </div>
           <div className='email'>
             <div>
-              <FontAwesomeIcon icon={faAt} size='5x' color='black' />
+              <FontAwesomeIcon
+                icon={faAt}
+                color='black'
+                className='email-address'
+              />
             </div>
 
             <a href='mailto:macialekdawid@gmail.com'>macialekdawid@gmail.com</a>
@@ -35,7 +43,7 @@ function Contact() {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <FontAwesomeIcon icon={faGithub} size='8x' className='gh-icon' />
+              <FontAwesomeIcon icon={faGithub} className='gh-icon' />
             </a>
           </div>
           <div className='linkIn-box'>
@@ -44,11 +52,7 @@ function Contact() {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                size='8x'
-                className='linkIn-icon'
-              />
+              <FontAwesomeIcon icon={faLinkedin} className='linkIn-icon' />
             </a>
           </div>
         </div>

@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+
   font-family: 'Roboto', sans-serif;
   font-family: 'Cinzel', serif;
 
@@ -10,3 +10,60 @@
   // font-family: 'Roboto', sans-serif;
 }
 $navBarWidth: 70px;
+
+// colors
+
+// $contrastColor: red;
+$contrastColor: #78804a;
+$lightMainColor: #fff;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+$widthBreakOne: 1280px;
+$widthBreakTwo: 1024px;
+$widthBreakThree: 780px;
+$widthBreakFour: 570px;
+$widthBreakFive: 360px;
+
+$heightBreak: 500px;
+
+@mixin mobileOne {
+  @media (max-width: #{$widthBreakOne} ) {
+    @content;
+  }
+}
+
+@mixin mobileTwo {
+  @media (max-width: #{$widthBreakTwo} ) {
+    @content;
+  }
+}
+@mixin mobileThree {
+  @media (max-width: #{$widthBreakThree} ) {
+    @content;
+  }
+}
+@mixin mobileFour {
+  @media (max-width: #{$widthBreakFour} ) {
+    @content;
+  }
+}
+@mixin mobileFive {
+  @media (max-width: #{$widthBreakFive} ) {
+    @content;
+  }
+}
+@mixin mobileFour {
+  @media (max-width: #{$widthBreakFour} ), (max-height: #{$heightBreak}) {
+    @content;
+  }
+}
+@mixin mobileHorizontal {
+  @media (max-height: #{$heightBreak}), (horizontal) {
+    @content;
+  }
+}

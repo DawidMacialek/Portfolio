@@ -1,6 +1,6 @@
 import './navbar.scss';
 import { topMenu } from '../../data/menuElements';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 function NavBar({ showNavBar }) {
   return (
@@ -21,7 +21,6 @@ function NavBar({ showNavBar }) {
                   smooth='easeInOutBack'
                   duration={400}
                   isDynamic={true}
-                  // offset={70}
                 >
                   {item.id}
                 </Link>

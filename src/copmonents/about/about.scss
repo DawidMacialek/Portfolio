@@ -1,55 +1,94 @@
 @import '../../global.scss';
+
 .about-container {
+  scroll-snap-align: start;
+  z-index: 1;
   position: relative;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #aaa;
+  min-height: 1000px;
+  @include flex-center;
   .content {
     position: absolute;
     top: $navBarWidth;
     bottom: 0;
-    width: 1400px;
+    max-width: 1400px;
     display: flex;
+    @include flex-center;
+    @include mobileThree {
+      flex-direction: column-reverse;
+    }
+
     .left-container {
       padding: 5%;
       flex: 0.5;
-      display: flex;
+      @include flex-center;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
       height: 100%;
-      // width: 100%;
-      // background-color: red;
-      h2 {
-        margin: 10px 0;
+      @include mobileTwo {
+        padding: 3%;
+      }
+      @include mobileThree {
+        padding: 1%;
+        align-items: flex-start;
+        flex-direction: row;
       }
       p {
-        margin: 20px 0;
-        font-size: 20px;
-        padding: 0 0 50px 25px;
+        margin: 20px;
+        font-size: 28px;
+        padding: 0 0 50px 50px;
+        text-align: justify;
         border-bottom: 1px solid black;
         border-left: 1px solid black;
+        @include mobileOne {
+          font-size: 24px;
+          padding: 0 0 30px 30px;
+        }
+        @include mobileTwo {
+          font-size: 22px;
+        }
+        @include mobileThree {
+          border-right: 1px solid black;
+          padding: 0 20px 20px 20px;
+          font-size: 20px;
+
+          margin: 5px;
+        }
+        @include mobileFour {
+          padding: 0 5px 5px 5px;
+          font-size: 16px;
+        }
+        @include mobileHorizontal {
+          font-size: 20px;
+        }
       }
     }
     .right-container {
       flex: 0.5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex-center;
+      justify-content: left;
       height: 100%;
-      // width: 100%;
-      // background-color: blue;
+      width: 100%;
+      @include mobileThree {
+        justify-content: center;
+      }
       .img-container {
-        width: 95%;
+        background-image: url('../../data/assets/about_me.jpg');
+        background-size: cover;
+        background-position: top;
+        width: 90%;
         height: 80%;
-        background: linear-gradient(
-          90deg,
-          rgba(2, 0, 36, 1) 0%,
-          rgba(9, 9, 121, 1) 35%,
-          rgba(0, 212, 255, 1) 100%
-        );
+        border-radius: 5px;
+        @include mobileTwo {
+          height: 70%;
+        }
+        @include mobileThree {
+          justify-content: center;
+          min-height: 300px;
+          width: 95%;
+        }
+        @include mobileHorizontal {
+          width: 70%;
+        }
       }
     }
   }

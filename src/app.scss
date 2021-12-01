@@ -1,22 +1,37 @@
-// @import "./global.scss";
-
-.app {
-  height: 100vh;
-
-  .pages {
-    width: 100%;
-    height: 100vh;
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-      display: none;
+@import './global.scss';
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  scrollbar-width: thin;
+  overflow-y: scroll;
+  // @include mobileThree {
+  //   scroll-snap-type: unset;
+  // }
+  // width: 100vw;
+  .app {
+    // min-height: 100vh;
+    height: 100%;
+    @include mobileFour {
     }
-    > * {
-      position: relative;
-      width: 100vw;
+    .pages {
       height: 100vh;
-      scroll-snap-align: start;
+      // @include mobileFour {
+      //   height: 100%;
+      // }
+      // width: 100vw;
+
+      // @include mobileThree {
+      //   height: 100%;
+      // }
+      // &::-webkit-scrollbar {
+      //   display: none;
+      // }
+      > * {
+        // scroll-snap-align: start;
+        position: relative;
+        // width: 100%;
+        // height: 100%;
+      }
     }
   }
 }

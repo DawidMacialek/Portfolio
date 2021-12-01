@@ -20,16 +20,16 @@ function Projects() {
           <nav className='nav-projects-container'>
             <ul className='ul'>
               <li>
-                <NavLink to='/'>All</NavLink>
+                <NavLink to='/'>wszystkie</NavLink>
               </li>
               <li>
-                <NavLink to='/game-projects'>Game</NavLink>
+                <NavLink to='/game-projects'>mini gry</NavLink>
               </li>
               <li>
-                <NavLink to='/web-projects'>Web</NavLink>
+                <NavLink to='/web-projects'>strony</NavLink>
               </li>
               <li>
-                <NavLink to='/app-projects'>App</NavLink>
+                <NavLink to='/app-projects'>aplikacje</NavLink>
               </li>
             </ul>
           </nav>

@@ -1,47 +1,57 @@
 @import '../../global.scss';
 
 .projects-container {
+  scroll-snap-align: start;
   z-index: 1;
-  height: 100vh;
+  min-height: 800px;
   display: flex;
   justify-content: center;
-
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  padding-bottom: 100px;
+  @include mobileFour {
+    min-height: 500px;
+  }
   .projects {
-    position: absolute;
+    position: relative;
     top: $navBarWidth;
-    bottom: 0;
     max-width: 1400px;
     width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h1 {
-      text-align: center;
-      margin: 2%;
-    }
+    // height: 100%;
     .nav-projects-container {
+      @include flex-center;
       margin: 3% 0;
       width: 100%;
-      display: flex;
-      justify-content: center;
       .ul {
-        width: 80%;
-        display: flex;
-        justify-content: center;
+        width: 90%;
+        @include flex-center;
+        @include mobileThree {
+          width: 100%;
+        }
+
         li {
           padding: 10px;
           line-height: 26px;
-          width: 20%;
+          width: 25%;
           text-align: center;
           cursor: pointer;
           text-transform: uppercase;
           list-style: none;
-          margin: 0 3%;
+          margin: 0 2%;
+          -webkit-tap-highlight-color: transparent;
+          @include mobileThree {
+            margin: 0 1%;
+            width: 35%;
+          }
+          @include mobileFour {
+            margin: 0 2px;
+            padding: 10px 2px;
+          }
           a {
             display: block;
-            color: #5A6038;
-            padding: 8px;
+            color: $contrastColor;
+            padding: 5%;
             width: 100%;
             text-decoration: none;
             border-top: 1px solid #bbb;
@@ -50,21 +60,33 @@
             border-right: 1px solid #000;
             box-shadow: 6px 6px 6px black;
             font-size: 26px;
+            transition: all 0.1s ease;
             &:active {
-              color: black;
-              outline: none;
+              color: none;
+            }
+            @include mobileTwo {
+              font-size: 22px;
+            }
+            @include mobileFour {
+              font-size: 17px;
+              padding: 3%;
             }
           }
           .active {
             font-size: 24px;
             transform: translate(2px, 2px);
             box-shadow: 2px 2px 2px black;
+            @include mobileTwo {
+              font-size: 20px;
+            }
+            @include mobileFour {
+              font-size: 15px;
+            }
           }
         }
       }
     }
     .content {
-      flex-grow: 1;
       width: 100%;
     }
   }

@@ -6,7 +6,7 @@ function About() {
     <div className='about-container' id={ABOUT}>
       <div className='content'>
         <div className='left-container'>
-          <h2>Moja historia</h2>
+        
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
             consequatur eius maiores repellat! Aliquam iusto accusantium itaque
@@ -20,10 +20,7 @@ function About() {
           </p>
         </div>
         <div className='right-container'>
-          <div className='img-container'>
-            jakieś zdjęcie
-            <img src='' alt='' />
-          </div>
+          <div className='img-container'></div>
         </div>
       </div>
     </div>

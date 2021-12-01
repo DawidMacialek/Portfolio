@@ -1,9 +1,13 @@
 @import '../../global.scss';
 
 .contact-container {
-  z-index: 1;
-  height: 100vh;
+  scroll-snap-align: start;
+  min-height: 100vh;
   @include flex-center;
+
+  // position: fixed;
+  z-index: -1;
+  padding-top: 30px;
   .contact-box {
     @include flex-center;
     background-color: $contrastColor;
@@ -22,16 +26,37 @@
         color: $lightMainColor;
         padding: 15px;
         letter-spacing: 4px;
+        @include mobileFour {
+          margin: 3px;
+        }
         a {
           display: inline-block;
           color: inherit;
           text-decoration: none;
           padding: 15px;
           font-size: 28px;
+          @include mobileFour {
+            font-size: 16px;
+            padding: 6px;
+          }
         }
       }
       .phone {
         justify-content: start;
+        .phone-number {
+          font-size: 60px;
+          @include mobileFour {
+            font-size: 30px;
+          }
+        }
+      }
+      .email {
+        .email-address {
+          font-size: 60px;
+          @include mobileFour {
+            font-size: 30px;
+          }
+        }
       }
     }
 
@@ -47,8 +72,9 @@
       .linkIn-icon {
         color: black;
         padding: 15px;
-
+        font-size: 110px;
         transition: all 0.5s ease;
+        -webkit-tap-highlight-color: transparent;
         &:hover {
           color: #0b66c2;
           padding: 0;
@@ -56,17 +82,25 @@
         @include mobileThree {
           margin: 0 20px;
         }
+        @include mobileFour {
+          font-size: 90px;
+        }
       }
       .gh-icon {
         color: black;
         padding: 15px;
+        font-size: 110px;
         transition: all 0.5s ease;
+        -webkit-tap-highlight-color: transparent;
         &:hover {
           color: #fff;
           padding: 0;
         }
         @include mobileThree {
           margin: 0 20px;
+        }
+        @include mobileFour {
+          font-size: 90px;
         }
       }
     }
@@ -81,11 +115,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 10%;
+    @include mobileFour {
+      padding: 5px 5%;
+      font-size: 14px;
+    }
     .copy {
       @include flex-center;
-      // display: flex;
-      // align-items: center;
-      // justify-content: center;
       flex-direction: row;
       .copy-right-icon {
         color: #fff;
