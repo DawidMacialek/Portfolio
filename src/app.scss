@@ -1,7 +1,10 @@
 @import './global.scss';
 html {
   scroll-behavior: smooth;
-  // scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
+  @include mobileOne {
+    scroll-snap-type: unset;
+  }
   scrollbar-width: thin;
   overflow-y: scroll;
   // @include mobileThree {

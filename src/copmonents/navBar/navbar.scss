@@ -1,16 +1,20 @@
 @import '../../global.scss';
 
 .nav-container {
-  position: absolute;
+  position: fixed;
   z-index: -20;
-  bottom: -$navBarWidth;
+  top: -$navBarWidth;
+  // bottom: -$navBarWidth;
   left: 0;
   width: 100%;
+  opacity: 0;
   height: $navBarWidth;
   background-color: $contrastColor;
   @include flex-center;
   border-top: 1px solid #000;
+  transition: all 0.1s ease;
   &.active-nav-container {
+    opacity: 1;
     border-top: none;
     position: fixed;
     z-index: 2;
