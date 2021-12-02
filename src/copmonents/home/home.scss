@@ -21,7 +21,7 @@
     position: relative;
     z-index: 1;
     height: 100vh;
-    min-height: 250px;
+    // min-height: 250px;
     @include flex-center;
     flex-direction: column;
     width: 100%;

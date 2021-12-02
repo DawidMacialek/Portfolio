@@ -20,34 +20,34 @@ function Projects() {
           <nav className='nav-projects-container'>
             <ul className='ul'>
               <li>
-                <NavLink exact to='/'>
+                <NavLink exact to='/Portfolio'>
                   wszystkie
                 </NavLink>
               </li>
               <li>
-                <NavLink to='/game-projects'>mini gry</NavLink>
+                <NavLink to='/Portfolio/game-projects'>mini gry</NavLink>
               </li>
               <li>
-                <NavLink to='/web-projects'>strony</NavLink>
+                <NavLink to='/Portfolio/web-projects'>strony</NavLink>
               </li>
               <li>
-                <NavLink to='/app-projects'>aplikacje</NavLink>
+                <NavLink to='/Portfolio/app-projects'>aplikacje</NavLink>
               </li>
             </ul>
           </nav>
           <div className='content'>
             <Routes>
-              <Route path='/' element={<ItemList dataItems={all} />} />
+              <Route path='/Portfolio' element={<ItemList dataItems={all} />} />
               <Route
-                path='/game-projects'
+                path='/Portfolio/game-projects'
                 element={<ItemList dataItems={games} />}
               />
               <Route
-                path='/web-projects'
+                path='/Portfolio/web-projects'
                 element={<ItemList dataItems={webs} />}
               />
               <Route
-                path='/app-projects'
+                path='/Portfolio/app-projects'
                 element={<ItemList dataItems={apps} />}
               />
             </Routes>
