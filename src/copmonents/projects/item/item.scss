@@ -64,6 +64,7 @@
   top: 10%;
   left: 10%;
   right: 10%;
+  bottom: 5%;
   position: fixed;
   z-index: 200;
   background-color: darken($lightMainColor, 60%);
@@ -75,11 +76,15 @@
     top: 15%;
     left: 5%;
     right: 5%;
+    bottom: 1%;
   }
   @include mobileFour {
     top: 15%;
     left: 3%;
     right: 3%;
+  }
+  @include mobileHorizontal {
+    top: 18%;
   }
   &.active {
     display: flex;
@@ -101,6 +106,10 @@
       }
       @include mobileFour {
         font-size: 22px;
+      }
+      @include mobileHorizontal {
+        font-size: 18px;
+        font-weight: 300;
       }
     }
     .close {
@@ -147,6 +156,9 @@
       @include mobileThree {
         font-size: 16px;
       }
+      @include mobileHorizontal {
+        font-size: 14px;
+      }
     }
     img {
       margin-right: 3%;
@@ -184,6 +196,9 @@
         color: $contrastColor;
       }
       @include mobileThree {
+        font-size: 60px;
+      }
+      @include mobileHorizontal {
         font-size: 60px;
       }
     }

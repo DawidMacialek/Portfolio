@@ -7,33 +7,16 @@ html {
   }
   scrollbar-width: thin;
   overflow-y: scroll;
-  // @include mobileThree {
-  //   scroll-snap-type: unset;
-  // }
-  // width: 100vw;
+
   .app {
-    // min-height: 100vh;
     height: 100%;
     @include mobileFour {
     }
     .pages {
       height: 100vh;
-      // @include mobileFour {
-      //   height: 100%;
-      // }
-      // width: 100vw;
 
-      // @include mobileThree {
-      //   height: 100%;
-      // }
-      // &::-webkit-scrollbar {
-      //   display: none;
-      // }
       > * {
-        // scroll-snap-align: start;
         position: relative;
-        // width: 100%;
-        // height: 100%;
       }
     }
   }

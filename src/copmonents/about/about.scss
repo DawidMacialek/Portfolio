@@ -49,13 +49,13 @@
         @include mobileThree {
           border-right: 1px solid black;
           padding: 0 20px 20px 20px;
-          font-size: 24px;
+          font-size: 26px;
 
           margin: 5px;
         }
         @include mobileFour {
-          padding: 0 5px 5px 5px;
-          font-size: 16px;
+          padding: 0 10px 10px 10px;
+          font-size: 20px;
         }
         @include mobileHorizontal {
           font-size: 20px;

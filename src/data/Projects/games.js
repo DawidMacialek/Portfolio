@@ -8,13 +8,16 @@ import memoryBigPhoto from '../assets/memoryBigPhoto.png';
 import wisielecMiniPhoto from '../assets/hangmanMiniPhoto.png';
 import wisielecBigPhoto from '../assets/hangmanBigPhoto.png';
 
+import miniTypingGame from '../assets/mini-typing-game.png';
+import typingGame from '../assets/typingGame.png';
+
 // Dane do wyświetlania treści w komponencie Projects, jeśli chcesz dodać kolejną pozycję dodaj obiekt w takim samym schemacie do tablicy games
 export const games = [
   {
     id: 0,
-    name: 'Saper',
+    name: 'Minesweeper',
     description:
-      'Klasyczna jednoosobowa gra komputerowa z 1981 roku. Gra polega na odkrywaniu poszczególnych pól na planszy w taki sposób, aby nie natrafić na minę. Odkrycie zaminowanego pola jest automatycznie przegraną rozgrywką. Wygrywamy odkrywając wszystkie wolne od min pola. Na każdym z odkrywanych pól napisana jest liczba min, które bezpośrednio stykają się z danym polem (od jeden do ośmiu). Prawym przyciskiem myszki oznaczymy dane pole flagą, gdzie potencjalnie może się tam ukrywać mina. Do wyboru mamy 3 poziomy, niestandardowo jednak dodałem jeszcze możliwość stworzenia własnej tablicy do gry. Moja wersja gry została napisana za pomocą  jezyków: html, css i javascript. Kod składa się z poszczególnych obiektów, które wykonują odrębne zadania. Wszystkie połączone są w jedynm głównym pliku "Game". Zapraszam do gry i analizy kodu.',
+      'Klasyczna jednoosobowa gra komputerowa z 1981 roku. Gra polega na odkrywaniu poszczególnych pól na planszy w taki sposób, aby nie natrafić na minę. Odkrycie zaminowanego pola oznacza przegraną rozgrywkę. Wygrywamy odkrywając wszystkie wolne od min pola. Na każdym z odkrywanych pól napisana jest liczba min, które bezpośrednio stykają się z danym polem (od jeden do ośmiu). Prawym przyciskiem myszki oznaczymy dane pole flagą, gdzie potencjalnie może się tam ukrywać mina. Do wyboru mamy 3 poziomy, niestandardowo jednak dodałem jeszcze możliwość stworzenia własnej tablicy do gry. Moja wersja gry została napisana za pomocą  jezyków: html, css i javascript. Kod składa się z poszczególnych obiektów, które wykonują odrębne zadania. Wszystkie połączone są w jedynm głównym pliku "Game". Zapraszam do gry i analizy kodu.',
     miniPicture: saperMiniPhoto,
     Picture: saperBigPhoto,
     gitHubHref:
@@ -26,7 +29,7 @@ export const games = [
     id: 1,
     name: 'Hangman',
     description:
-      ' Jest to gra, polegająca na odgadywaniu słów. Gracz wpisuje literę, jeśli trafia prawidłowo to litera uzupełnia brakujące miejsca, w przeciwnym wypadku rysuję się kolejna kreska tworząc obraz szubienicy. Gracz przegrywa kiedy szubienica staję się w pełni narysowana. Gra opiera się o prostą logikę i została napisana za pomocą: html, css i javascript. Jest to jeden z pierwszych projektów napisanych na poczatku mojej nauki javascript. Kod nie był modyfikowany i odzwierciedla etap moich ówczesnych umiejętności. Zapraszam do gry lub analizy kodu. ',
+      ' Jest to gra, polegająca na odgadywaniu słów. Gracz wpisuje literę, jeśli trafia prawidłowo to litera uzupełnia brakujące miejsca, w przeciwnym wypadku rysuję się kolejna kreska tworząc obraz szubienicy. Gracz przegrywa kiedy szubienica staję się w pełni narysowana. Gra opiera się o prostą logikę i została napisana za pomocą: html, css i javascript. Jest to jeden z pierwszych projektów napisanych na poczatku mojej nauki programowania. Kod nie był modyfikowany i odzwierciedla etap moich ówczesnych umiejętności. Zapraszam do gry lub analizy kodu. ',
     miniPicture: wisielecMiniPhoto,
     Picture: wisielecBigPhoto,
     gitHubHref:
@@ -45,5 +48,15 @@ export const games = [
       'https://github.com/DawidMacialek/Project-Games/tree/main/memory%20game',
     playHref:
       'https://dawidmacialek.github.io/Project-Games/memory%20game/index.html',
+  },
+  {
+    id: 3,
+    name: 'Typing Game',
+    description:
+      'Prosta, a jakże ekstytujca gra polegająca na przepisywaniu losowych słów. Od startu gry timer odlicza sekundy, przepisując słowo poprawnie do timera dopisywana jest pewna liczba sekund. Liczba dopisywanych sekund zależy od poziomu na którym gracz decyduje się grać. W momencie kiedy czas dobiega do zera, rozgrywka się kończy. Ilośc przepisanych słów decyduję o Twoim końcowym wyniku rozgrywki. Sprawdź sam jak szybko piszesz na kliawiaturze.',
+    miniPicture: miniTypingGame,
+    Picture: typingGame,
+    gitHubHref: 'https://github.com/DawidMacialek/typing-game',
+    playHref: 'https://dawidmacialek.github.io/typing-game/',
   },
 ];
