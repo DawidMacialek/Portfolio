@@ -28,7 +28,7 @@ function Home() {
       <div className='home'>
         <div className='welcome'>
           <h1>Dawid Maciałek</h1>
-          <h2>Front End Developer!</h2>
+          <h2>Front End Developer</h2>
           <div className='tapping-container'>
             <span className='quote' ref={refToQuote}></span>
           </div>

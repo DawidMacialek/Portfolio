@@ -11,10 +11,11 @@ function App() {
 
   window.onscroll = () => {
     let windowHeight = window.innerHeight;
-    let scrollPos = window.scrollY;
-    scrollPos >= windowHeight ? setShowNavBar(true) : setShowNavBar(false);
+    let scrollPos = window.scrollY + 1;
+    scrollPos > windowHeight ? setShowNavBar(true) : setShowNavBar(false);
+    console.log(scrollPos);
+    console.log(windowHeight);
   };
-
   return (
     <div className='app'>
       <NavBar showNavBar={showNavBar} />

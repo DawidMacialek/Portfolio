@@ -4,22 +4,19 @@
   position: fixed;
   z-index: -20;
   top: -$navBarWidth;
-  // bottom: -$navBarWidth;
   left: 0;
   width: 100%;
   opacity: 0;
   height: $navBarWidth;
   background-color: $contrastColor;
   @include flex-center;
-  border-top: 1px solid #000;
-  transition: all 0.1s ease;
+  transition: all 0.1s ease-out;
   &.active-nav-container {
     opacity: 1;
-    border-top: none;
     position: fixed;
     z-index: 2;
     top: 0;
-    bottom: 0;
+    // bottom: 0;
   }
   .nav-bar {
     width: 70%;
