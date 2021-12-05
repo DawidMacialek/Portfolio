@@ -1,5 +1,5 @@
-import './app.scss';
 import { useState } from 'react';
+import './app.scss';
 import Home from './copmonents/home/Home';
 import About from './copmonents/about/About';
 import Projects from './copmonents/projects/Projects';

@@ -9,7 +9,7 @@ export const webs = [
       'Aplikacja umożliwiająca sprawdzenie pogody w danym mieście. Użytkownik wpisuje miasto dla którego, chce zobaczyć warunki pogodowe takie jak temperaturę i stan zachmurzenia. Aplikacja korzysta z API openweathermap.org/. ',
     miniPicture: miniWeatherApp,
     Picture: weatherApp,
-    gitHubHref: 'https://github.com/DawidMacialek/weather-app',
-    playHref: 'https://dawidmacialek.github.io/weather-app/',
+    gitHubHref: 'https://github.com/DawidMacialek/WeatherAPP',
+    playHref: 'https://dawidmacialek.github.io/WeatherAPP/',
   },
 ];
