@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.02666ead.chunk.css",
-    "main.js": "/Portfolio/static/js/main.d5da8558.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.d5da8558.chunk.js.map",
+    "main.js": "/Portfolio/static/js/main.0c29f6ca.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.0c29f6ca.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.a4888594.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.a4888594.js.map",
     "static/js/2.1c49f4a9.chunk.js": "/Portfolio/static/js/2.1c49f4a9.chunk.js",
@@ -23,12 +23,14 @@
     "static/media/to-app-react-redux.2b3835ca.png": "/Portfolio/static/media/to-app-react-redux.2b3835ca.png",
     "static/media/to-do-app-react.efa10ea5.png": "/Portfolio/static/media/to-do-app-react.efa10ea5.png",
     "static/media/toDoAppReact.bcb3d005.png": "/Portfolio/static/media/toDoAppReact.bcb3d005.png",
-    "static/media/toDoAppReactRedux.ea251fe1.png": "/Portfolio/static/media/toDoAppReactRedux.ea251fe1.png"
+    "static/media/toDoAppReactRedux.ea251fe1.png": "/Portfolio/static/media/toDoAppReactRedux.ea251fe1.png",
+    "static/media/weather-app-mini.cd7ce694.png": "/Portfolio/static/media/weather-app-mini.cd7ce694.png",
+    "static/media/weather-app.251b70df.png": "/Portfolio/static/media/weather-app.251b70df.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a4888594.js",
     "static/js/2.1c49f4a9.chunk.js",
     "static/css/main.02666ead.chunk.css",
-    "static/js/main.d5da8558.chunk.js"
+    "static/js/main.0c29f6ca.chunk.js"
   ]
 }
