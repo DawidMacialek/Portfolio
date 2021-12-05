@@ -1,12 +1,15 @@
+import miniWeatherApp from '../assets/weather-app-mini.png';
+import weatherApp from '../assets/weather-app.png';
+
 export const webs = [
   {
     id: 0,
-    name: 'Nie mam żadnych stron!',
+    name: 'Weather App',
     description:
-      'To do App made by react create appTo do App made by react create appTo do App made by react create appTo do App made by react create appTo do App made by react create appTo do App made by react create appTo do App made by react create app',
-    miniPicture: null,
-    Picture: null,
-    gitHubHref: null,
-    playHref: null,
+      'Aplikacja umożliwiająca sprawdzenie pogody w danym mieście. Użytkownik wpisuje miasto dla którego, chce zobaczyć warunki pogodowe takie jak temperaturę i stan zachmurzenia. Aplikacja korzysta z API openweathermap.org/. ',
+    miniPicture: miniWeatherApp,
+    Picture: weatherApp,
+    gitHubHref: 'https://github.com/DawidMacialek/weather-app',
+    playHref: 'https://dawidmacialek.github.io/weather-app/',
   },
 ];
