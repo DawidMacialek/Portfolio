@@ -4,8 +4,6 @@
   scroll-snap-align: start;
   min-height: 100vh;
   @include flex-center;
-
-  // position: fixed;
   z-index: -1;
   padding-top: 30px;
   .contact-box {
@@ -59,16 +57,13 @@
         }
       }
     }
-
     .links-container {
       @include flex-center;
-
       flex-direction: column;
       margin: 0 25px;
       @include mobileThree {
         flex-direction: row;
       }
-
       .linkIn-icon {
         color: black;
         padding: 15px;

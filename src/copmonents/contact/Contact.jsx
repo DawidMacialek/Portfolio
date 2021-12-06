@@ -31,7 +31,6 @@ function Contact() {
                 className='email-address'
               />
             </div>
-
             <a href='mailto:macialekdawid@gmail.com'>macialekdawid@gmail.com</a>
           </div>
         </div>
