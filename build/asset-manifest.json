@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.83f0dd6d.chunk.css",
+    "main.js": "/Portfolio/static/js/main.6ab564b0.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.6ab564b0.chunk.js.map",
+    "runtime-main.js": "/Portfolio/static/js/runtime-main.a4888594.js",
+    "runtime-main.js.map": "/Portfolio/static/js/runtime-main.a4888594.js.map",
+    "static/js/2.1c49f4a9.chunk.js": "/Portfolio/static/js/2.1c49f4a9.chunk.js",
+    "static/js/2.1c49f4a9.chunk.js.map": "/Portfolio/static/js/2.1c49f4a9.chunk.js.map",
+    "index.html": "/Portfolio/index.html",
+    "static/css/main.83f0dd6d.chunk.css.map": "/Portfolio/static/css/main.83f0dd6d.chunk.css.map",
+    "static/js/2.1c49f4a9.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.1c49f4a9.chunk.js.LICENSE.txt",
+    "static/media/about.scss": "/Portfolio/static/media/about_me.5c50b6b1.jpg",
+    "static/media/expense-tracker-mini.3ae5c133.png": "/Portfolio/static/media/expense-tracker-mini.3ae5c133.png",
+    "static/media/expenseTracker.612291ab.png": "/Portfolio/static/media/expenseTracker.612291ab.png",
+    "static/media/hangmanBigPhoto.1c7b5f31.png": "/Portfolio/static/media/hangmanBigPhoto.1c7b5f31.png",
+    "static/media/hangmanMiniPhoto.f6ad94dc.png": "/Portfolio/static/media/hangmanMiniPhoto.f6ad94dc.png",
+    "static/media/home.scss": "/Portfolio/static/media/home-background-2.4fd30c29.jpg",
+    "static/media/memory.56324529.png": "/Portfolio/static/media/memory.56324529.png",
+    "static/media/memoryBigPhoto.0570077a.png": "/Portfolio/static/media/memoryBigPhoto.0570077a.png",
+    "static/media/mini-typing-game.578b750b.png": "/Portfolio/static/media/mini-typing-game.578b750b.png",
+    "static/media/saper-info-photo.08eedb11.png": "/Portfolio/static/media/saper-info-photo.08eedb11.png",
+    "static/media/to-app-react-redux.2b3835ca.png": "/Portfolio/static/media/to-app-react-redux.2b3835ca.png",
+    "static/media/to-do-app-react.efa10ea5.png": "/Portfolio/static/media/to-do-app-react.efa10ea5.png",
+    "static/media/toDoAppReact.bcb3d005.png": "/Portfolio/static/media/toDoAppReact.bcb3d005.png",
+    "static/media/toDoAppReactRedux.ea251fe1.png": "/Portfolio/static/media/toDoAppReactRedux.ea251fe1.png",
+    "static/media/weather-app-mini.cd7ce694.png": "/Portfolio/static/media/weather-app-mini.cd7ce694.png",
+    "static/media/weather-app.251b70df.png": "/Portfolio/static/media/weather-app.251b70df.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a4888594.js",
+    "static/js/2.1c49f4a9.chunk.js",
+    "static/css/main.83f0dd6d.chunk.css",
+    "static/js/main.6ab564b0.chunk.js"
+  ]
+}
