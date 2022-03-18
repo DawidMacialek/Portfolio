@@ -3,7 +3,7 @@ import weatherApp from '../assets/weather-app.png';
 import miniQuizApp from '../assets/quiz-app-mini.png';
 import quizApp from '../assets/quiz-app-big.png';
 import cryptoApp from '../assets/crypto-app-big.png';
-import miniCryptoApp from '../assets/crypto-app-mini.png';
+import miniCryptoApp from '../assets/crypto-app-mini.PNG';
 
 export const webs = [
   {
@@ -30,7 +30,7 @@ export const webs = [
     id: 2,
     name: 'CryptoApp',
     description:
-      'CryptoApp to strona internetowa zawierająca podstawowe informacje na temat rynku kryptowalut. Użytkownik na stronie może wybrać interesującą go kryptowalutę, dowiedzieć się na jej temat pożądanych informacji, ale również otrzymuję adresy stron do aktualnych wiadomości medialnych. Za dostarczenie danych odpowiada coinranking oraz coingeco API dzięki serwisowi RapidApi.   ',
+      'CryptoApp to strona internetowa zawierająca podstawowe informacje na temat rynku kryptowalut. Użytkownik na stronie może wybrać interesującą go kryptowalutę i dowiedzieć się na jej temat pożądanych informacji. Może również znaleźć adresy stron internetowych do aktualnych wiadomości medialnych. Za dostarczenie danych odpowiada coinranking oraz coingeco API dzięki serwisowi RapidApi. Zarządzanie stanem w odnieniesu do współpracy z tymi serwisami odybwa się dzięki Redux Toolkit. Struktura i style strony są zbudowane za pomocą biblioteki Bootstrap. Wykresy danych natomiast są są zrealizowane za pomocą chart.js.',
     miniPicture: miniCryptoApp,
     Picture: cryptoApp,
     gitHubHref: 'https://github.com/DawidMacialek/crypto-app',

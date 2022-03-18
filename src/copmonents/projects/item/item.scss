@@ -10,28 +10,24 @@
   -webkit-tap-highlight-color: transparent;
   @include flex-center;
   @include mobileOne {
-    width: 220px;
-    height: 220px;
     margin: 10px;
     font-size: 30px;
   }
   @include mobileTwo {
-    width: 200px;
-    height: 200px;
     margin: 8px;
-    font-size: 26px;
+    font-size: 30px;
   }
   @include mobileThree {
-    width: 180px;
-    height: 180px;
-    margin: 6px;
-    font-size: 26px;
+    width: 250px;
+    height: 250px;
+    margin: 16px;
+    font-size: 30px;
   }
   @include mobileFour {
-    width: 120px;
-    height: 120px;
-    margin: 6px;
-    font-size: 20px;
+    width: 300px;
+    height: 300px;
+    margin: 16px;
+    font-size: 34px;
   }
   h4 {
     text-transform: uppercase;
