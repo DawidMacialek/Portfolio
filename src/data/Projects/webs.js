@@ -2,6 +2,8 @@ import miniWeatherApp from '../assets/weather-app-mini.png';
 import weatherApp from '../assets/weather-app.png';
 import miniQuizApp from '../assets/quiz-app-mini.png';
 import quizApp from '../assets/quiz-app-big.png';
+import cryptoApp from '../assets/crypto-app-big.png';
+import miniCryptoApp from '../assets/crypto-app-mini.png';
 
 export const webs = [
   {
@@ -23,5 +25,15 @@ export const webs = [
     Picture: quizApp,
     gitHubHref: 'https://github.com/DawidMacialek/quizApp',
     playHref: 'https://dawidmacialek.github.io/quizApp/',
+  },
+  {
+    id: 2,
+    name: 'CryptoApp',
+    description:
+      'CryptoApp to strona internetowa zawierająca podstawowe informacje na temat rynku kryptowalut. Użytkownik na stronie może wybrać interesującą go kryptowalutę, dowiedzieć się na jej temat pożądanych informacji, ale również otrzymuję adresy stron do aktualnych wiadomości medialnych. Za dostarczenie danych odpowiada coinranking oraz coingeco API dzięki serwisowi RapidApi.   ',
+    miniPicture: miniCryptoApp,
+    Picture: cryptoApp,
+    gitHubHref: 'https://github.com/DawidMacialek/crypto-app',
+    playHref: 'https://dawidmacialek.github.io/crypto-app',
   },
 ];
